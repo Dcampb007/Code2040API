@@ -7,5 +7,6 @@ data = {
 }
 
 req = urllib2.Request('http://challenge.code2040.org/api/register')
+req.add_header('Content-Type', 'application/json')
 
 response = urllib2.urlopen(req, json.dumps(data))
